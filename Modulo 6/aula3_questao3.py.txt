@@ -1,0 +1,30 @@
+import random
+
+# 1. Criar lista com 20 números entre -10 e 10
+lista = [random.randint(-10, 10) for _ in range(20)]
+print("Lista original:", lista)
+
+# 2. Encontrar o maior intervalo de negativos
+max_inicio = max_fim = None
+maior_tamanho = 0
+
+i = 0
+while i < len(lista):
+    if lista[i] < 0:  # início de um intervalo de negativos
+        inicio = i
+        while i < len(lista) and lista[i] < 0:
+            i += 1
+        fim = i  # índice logo após o último negativo
+        tamanho = fim - inicio
+        if tamanho > maior_tamanho:
+            maior_tamanho = tamanho
+            max_inicio, max_fim = inicio, fim
+    else:
+        i += 1
+
+# 3. Deletar o maior intervalo (se existir)
+if max_inicio is not None:
+    del lista[max_inicio:max_fim]
+
+# 4. Imprimir lista após deleção
+print("Lista após deleção:", lista)

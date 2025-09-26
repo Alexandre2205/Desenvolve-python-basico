@@ -1,0 +1,8 @@
+# Lista de endereços
+urls = ["www.google.com", "www.gmail.com", "www.github.com", "www.reddit.com", "www.yahoo.com"]
+
+# Criar lista de domínios usando fatiamento
+dominios = [url[4:-4] for url in urls]
+
+print("Lista de URLs:", urls)
+print("Lista de domínios:", dominios)
