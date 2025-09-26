@@ -1,0 +1,17 @@
+import random
+
+# Passo 2: quantidade de elementos
+num_elementos = random.randint(5, 20)
+
+# Passo 3: gerar lista com a quantidade definida
+elementos = [random.randint(1, 10) for _ in range(num_elementos)]
+
+# Passo 4: imprimir a lista
+print("Lista elementos:", elementos)
+
+# Passo 5: calcular soma e média
+soma = sum(elementos)
+media = soma / len(elementos)
+
+print("Soma dos valores:", soma)
+print("Média dos valores:", media)

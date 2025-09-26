@@ -1,0 +1,17 @@
+import random
+
+# Passo 2: gerar listas
+lista1 = [random.randint(0, 50) for _ in range(20)]
+lista2 = [random.randint(0, 50) for _ in range(20)]
+
+# Passo 3: interseção sem duplicatas, ordenada
+interseccao = sorted(set(lista1) & set(lista2))
+
+# Passo 4: imprimir listas
+print("Lista 1:", lista1)
+print("Lista 2:", lista2)
+print("Interseção (ordenada):", interseccao)
+
+# Passo 5: contar ocorrência em cada lista
+for elemento in interseccao:
+    print(f"Elemento {elemento} -> Lista1: {lista1.count(elemento)} vezes, Lista2: {lista2.count(elemento)} vezes")

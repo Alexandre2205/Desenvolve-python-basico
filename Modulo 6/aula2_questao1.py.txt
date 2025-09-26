@@ -1,0 +1,17 @@
+import random
+
+# Passo 1 e 2: gerar lista
+lista = [random.randint(-100, 100) for _ in range(20)]
+
+# Passo 3: mostrar lista ordenada sem alterar a original
+print("Lista ordenada:", sorted(lista))
+
+# Passo 4: mostrar lista original
+print("Lista original:", lista)
+
+# Passo 5: mostrar índices do maior e menor valor
+indice_maior = lista.index(max(lista))
+indice_menor = lista.index(min(lista))
+
+print("Índice do maior valor:", indice_maior)
+print("Índice do menor valor:", indice_menor)
